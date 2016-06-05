@@ -15,6 +15,13 @@ class Array{
     this->length = length;
     data         = new T[length];
   }
+  //!NOTE: Copy constructor below
+  Array(const Array<T>& arr)
+   : Array(arr.getLength())
+    {
+      for(int i = 0; i < length; i++)
+        data[i] = arr[i];
+    }
   ~Array(){
     delete []data;
   }
@@ -27,17 +34,19 @@ class Array{
     assert((index >= 0) && (index < length));
     return data[index];
   }
-
+  //!NOTE: overloaded 'operator=' below
   Array<T>& operator=(const Array<T>& rhs){
+    // erase everything first
     Erase();
-    data = new T[rhs.getLength()];
+    // resize 'data' to hold new items
+    data   = new T[rhs.getLength()];
     length = rhs.getLength();
-    for(int i = 0; i < length; i++){
+    // copy the items into 'data'
+    for(int i = 0; i < length; i++)
       data[i] = rhs[i];
-    }
+    // return a reference to this object
     return *this;
   }
-
   int getLength() const;
 };
 template <typename T>

@@ -4,7 +4,6 @@
 using namespace std;
 int main(){
   Array<int> intarray(20);
-  Array<Array<int> > arrarr(10);
   for(int i = 0; i < 20; i++)
     intarray[i] = i+1;
 
@@ -16,6 +15,7 @@ int main(){
     cout << "iarray[" << i << "] = \t" << iarray[i] << endl;
 
   // This should use the overloaded operator=
+  Array<Array<int> > arrarr(10);
   arrarr[0] = arrarr[1] = intarray;
   // modify elements of first array
   for(int i = 0; i < 20; i++)
