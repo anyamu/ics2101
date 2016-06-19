@@ -6,3 +6,4 @@ Code from the class notes are contained in this repository:
 * [Week3: C++ Templates](https://github.com/anyamu/bbt2202/tree/master/week3)
 * [Week4: C++ STL](https://github.com/anyamu/bbt2202/tree/master/week4)
 * [Week5: Design Patterns with C++](https://github.com/anyamu/bbt2202/tree/master/week5)
+* [Week7: Group Projects C++](https://github.com/anyamu/bbt2202/tree/master/week7)
